@@ -1,0 +1,10 @@
+name: "Create job matrix"
+description: "Creates a job-matrix that can be passed to a subsequent action"
+inputs:
+  os:
+    description: "Operating system to run the job on"
+    required: true
+    default: "all"
+runs:
+  using: "node14"
+  main: "dist/create-matrix.js"

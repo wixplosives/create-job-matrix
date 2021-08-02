@@ -1,0 +1,25 @@
+{
+  "name": "create-job-matrix",
+  "version": "1.0.0",
+  "description": "Returns a string representing a a job-matrix that can be passed to a subsequent job",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wixplosives/create-job-matrix.git"
+  },
+  "scripts": {
+    "start": "npm run build && node dist/create-matrix.js",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Ari Kishon",
+  "bugs": {
+    "url": "https://github.com/wixplosives/create-job-matrix/issues"
+  },
+  "homepage": "https://github.com/wixplosives/create-job-matrix#readme",
+  "dependencies": {
+    "@actions/core": "^1.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
+}
