@@ -29,16 +29,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const core = __importStar(require("@actions/core"));
+const ALL_PLATFORMS = 'Ubuntu-latest","Windows-latest","MacOS-latest';
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const platform = core.getInput("os");
-            let platformJSON = "";
-            switch (platform) {
-                default:
-                    platformJSON = `\"platform\":[\"${platform}-latest\"]`;
-                    break;
-            }
+            let platform = core.getInput("os");
+            platform =
+                platform.toLowerCase() == "all" ? ALL_PLATFORMS : `${platform}-latest`;
+            const platformJSON = `\"platform\":[\"${platform}\"]`;
             const matrixJSON = `{${platformJSON}}`;
             core.setOutput("matrix", matrixJSON);
         }
