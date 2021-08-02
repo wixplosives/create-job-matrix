@@ -29,4 +29,3 @@ switch (platform) {
 }
 const matrixJSON = `{${platformJSON}}`;
 core.setOutput("matrix", matrixJSON);
-console.log(matrixJSON);
