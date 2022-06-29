@@ -13,6 +13,10 @@ async function run(): Promise<void> {
       case "windows": { 
           platform = "windows-electron"
           break; 
+      }
+      case "windows-latest": { 
+        platform = "windows-latest"
+        break; 
       } 
       default: { 
           platform = `${platform}-latest`
